@@ -4,5 +4,6 @@ from django.db import models
 
 class History(models.Model):
 
-    keyword = models.CharField(max_length=512)
     created_at = models.DateTimeField(auto_now_add=True)
+    keyword = models.CharField(max_length=512, default="")
+    result = models.CharField(max_length=4096, default="")
